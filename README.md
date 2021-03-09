@@ -4,17 +4,18 @@
   </p>
 </div>
 
+## Table Of Contents
+
+- [Table Of Contents](#table-of-contents)
+- [About ❔](#about-)
+- [Installation](#installation)
+- [Usages 🛠](#usages-)
+- [Projects](#projects)
+
+
 ## About ❔
 
 This is a Mod Mail Bot made by FiredragonPlayz#0087 using discord.js!
-
-
-## Table Of Contents
-
-- [About ❔](#about-)
-- [Table Of Contents](#table-of-contents)
-- [Installation](#installation)
-- [Usages 🛠](#usages-)
 
 
 ## Installation 
@@ -37,6 +38,12 @@ This is a Mod Mail Bot made by FiredragonPlayz#0087 using discord.js!
   - Type `$close <reason>` (Must Have Staff Role)
 
 
+## Projects
+
+- Other Projects
+  - [Flame Bot](https://top.gg/bot/796279185080582185)
+  - [Website](https://flamebot.gq)
+
 <div align="center">
   <br />
   <p>
@@ -44,8 +51,7 @@ This is a Mod Mail Bot made by FiredragonPlayz#0087 using discord.js!
   </p>
 </div>
 
-- Other Projects
-  - [Flame Bot](https://top.gg/bot/796279185080582185)
-  - [Website](https://flamebot.gq)
 
-Make Sure to Star and Follow!
+
+Make Sure to ⭐ Star and � Follow! 
+And Don't Remove the Credits!
