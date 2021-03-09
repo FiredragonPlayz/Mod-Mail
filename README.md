@@ -34,12 +34,12 @@ This is a Mod Mail Bot made by FiredragonPlayz#0087 using discord.js!
   - Type `$open <user id>` (Must Have Staff Role) 
 
 - Closing a Ticket
-  - Type `$close <reason>>` (Must Have Staff Role)
+  - Type `$close <reason>` (Must Have Staff Role)
 
 
 <div align="center">
   <br />
   <p>
-    <a href="https://cdn.discordapp.com/emojis/798283025183801374.png"><img src="https://github.com/FiredragonPlayz"alt="Github" /></a>
+    <a href="https://github.com/FiredragonPlayz"><img src="https://cdn.discordapp.com/emojis/798283025183801374.png"alt="Github" /></a>
   </p>
 </div>
