@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-    Discord.js Mod Mail Bot
+    <h3>Discord.js Mod Mail Bot
   </p>
 </div>
 
@@ -34,7 +34,7 @@ This is a Mod Mail Bot made by FiredragonPlayz#0087 using discord.js!
   - Type `$open <user id>` (Must Have Staff Role) 
 
 - Closing a Ticket
- - Type `$close <reason>>` (Must Have Staff Role)
+  - Type `$close <reason>>` (Must Have Staff Role)
 
 
 <div align="center">
