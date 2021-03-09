@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-    <h3>Discord.js Mod Mail Bot
+    <h3>Discord.js Mod Mail Bot</h3>
   </p>
 </div>
 
