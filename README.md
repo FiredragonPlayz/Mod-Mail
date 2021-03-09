@@ -40,6 +40,6 @@ This is a Mod Mail Bot made by FiredragonPlayz#0087 using discord.js!
 <div align="center">
   <br />
   <p>
-    <a href="https://github.com/FiredragonPlayz"><img src="https://cdn.discordapp.com/emojis/798283025183801374.png"alt="Github"width="50" /></a> <a href="https://youtube.com/c/FiredragonPlayz"><img src="https://cdn.discordapp.com/emojis/733371225400803418.png"alt="YouTube" width="50"/></a> <a href="https://twitter.com/Firedragon_Play"><img src="https://cdn.discordapp.com/emojis/772684068156342272.png"alt="Twitter" width="50" /></a>
+    <a href="https://github.com/FiredragonPlayz"><img src="https://cdn.discordapp.com/emojis/798283025183801374.png"alt="Github"width="40" /></a> <a href="https://youtube.com/c/FiredragonPlayz"><img src="https://cdn.discordapp.com/emojis/733371225400803418.png"alt="YouTube" width="50"/></a> <a href="https://twitter.com/Firedragon_Play"><img src="https://cdn.discordapp.com/emojis/772684068156342272.png"alt="Twitter" width="50" /></a>
   </p>
 </div>
