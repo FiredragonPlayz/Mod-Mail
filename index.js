@@ -2,20 +2,19 @@ const discord = require("discord.js");
 const client = new discord.Client()
 const { token, prefix, ServerID } = require("./config.json")
 const { Collection, Client, Discord } = require('discord.js');
-const path = require('path')
-const fs = require('fs')
 const config = require('./config.json');
 module.exports = client;
 client.commands = new Collection();
 client.prefix = config.prefix;
-client.aliases = new Collection();
 client.categories = fs.readdirSync(path.resolve('commands'));
 ["command"].forEach(handler => {
     require(path.resolve(`handlers/${handler}`))(client); 
 });
 client.on("ready", () => {
 
+client.on("ready", () => {
 
+    console.log("I am ready to get some DM's!")
     client.user.setActivity("Watching My Dm's | Made By: FiredragonPlayz#0087")
 })
 
@@ -41,12 +40,14 @@ client.on("channelDelete", (channel) => {
 client.on("message", async message => {
     if (message.author.bot) return;
 
-    let args = message.content.slice(prefix.length).split(' ');
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
     let command = args.shift().toLowerCase();
 
 
     if (message.guild) {
+
         if (command == "setup") {
+            if (!message.content.startsWith(prefix)) return;
             if (!message.member.hasPermission("ADMINISTRATOR")) {
                 return message.channel.send("You need Admin Permissions to setup the modmail system!")
             }
@@ -88,8 +89,10 @@ client.on("message", async message => {
             return message.channel.send("Setup is Completed ✅")
 
         } else if (command == "close") {
-
-
+            if (!message.content.startsWith(prefix)) return;
+            if (!message.member.roles.cache.find((x) => x.name == "Staff")) {
+                return message.channel.send("You need `Staff` role to use this command")
+            }
             if (message.channel.parentID == message.guild.channels.cache.find((x) => x.name == "MODMAIL").id) {
 
                 const person = message.guild.members.cache.get(message.channel.name)
@@ -111,13 +114,14 @@ client.on("message", async message => {
 
             }
         } else if (command == "open") {
+            if (!message.content.startsWith(prefix)) return;
             const category = message.guild.channels.cache.find((x) => x.name == "MODMAIL")
 
             if (!category) {
                 return message.channel.send("Moderation system is not setuped in this server, use " + prefix + "setup")
             }
 
-            if (!message.member.roles.cache.find((x) => x.name == "SUPPORTER")) {
+            if (!message.member.roles.cache.find((x) => x.name == "Staff")) {
                 return message.channel.send("You need `Staff` role to use this command")
             }
 
@@ -145,7 +149,7 @@ client.on("message", async message => {
                 .setDescription(message.content)
                 .addField("Name", target.user.username)
                 .addField("Account Creation Date", target.user.createdAt)
-                .addField("Direct Contact", "Yes(it means this mail is opened by a supporter)");
+                .addField("Direct Contact", "Yes(it means this mail is opened by a Staff)");
 
             channel.send(nembed)
 
@@ -153,7 +157,7 @@ client.on("message", async message => {
                 .setAuthor("DIRECT MAIL OPENED")
                 .setColor("GREEN")
                 .setThumbnail(client.user.displayAvatarURL())
-                .setDescription("You have been contacted by Supporter of **" + message.guild.name + "**, Please wait until he send another message to you!");
+                .setDescription("You have been contacted by Staff of **" + message.guild.name + "**, Please wait until he send another message to you!");
 
 
             target.send(uembed);
@@ -164,12 +168,13 @@ client.on("message", async message => {
 
             return message.channel.send(newEmbed);
         } else if (command == "help") {
+            if (!message.content.startsWith(prefix)) return;
             let embed = new discord.MessageEmbed()
                 .setAuthor('MODMAIL BOT', client.user.displayAvatarURL())
                 .setURL('https://flamebot.gq')
                 .setColor("#FF0000")
 
-                .setDescription("This bot is made by Purge, You cannot remove the credits.")
+                .setDescription("This bot is made by FiredragonPlayz") //Please Don't Remove Credits
                 .addField("$setup", "Setup the modmail system(This is not for multiple server.)", true)
 
                 .addField("$open", 'Let you open the mail to contact anyone with his ID', true)
@@ -206,20 +211,6 @@ client.on("message", async message => {
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     if (!message.guild) {
         const guild = await client.guilds.cache.get(ServerID) || await client.guilds.fetch(ServerID).catch(m => { })
