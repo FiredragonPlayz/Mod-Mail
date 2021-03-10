@@ -1,16 +1,7 @@
 const discord = require("discord.js");
 const client = new discord.Client()
 const { token, prefix, ServerID } = require("./config.json")
-const { Collection, Client, Discord } = require('discord.js');
 const config = require('./config.json');
-module.exports = client;
-client.commands = new Collection();
-client.prefix = config.prefix;
-client.categories = fs.readdirSync(path.resolve('commands'));
-["command"].forEach(handler => {
-    require(path.resolve(`handlers/${handler}`))(client); 
-});
-client.on("ready", () => {
 
 client.on("ready", () => {
 
