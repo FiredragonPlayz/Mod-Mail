@@ -53,5 +53,5 @@ This is a Mod Mail Bot made by FiredragonPlayz#0087 using discord.js!
 
 
 
-Make Sure to ⭐ Star and � Follow! 
+Make Sure to ⭐ Star and 💎 Follow! 
 And Don't Remove the Credits!
