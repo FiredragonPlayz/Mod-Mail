@@ -15,7 +15,7 @@
 
 ## About ❔
 
-This is a Mod Mail Bot made by FiredragonPlayz#0087 using discord.js!
+This is a Mod Mail Bot made by [Charweee](https://github.com/charweeeee) and editied by FiredragonPlayz#0087 using discord.js!
 
 
 ## Installation 
