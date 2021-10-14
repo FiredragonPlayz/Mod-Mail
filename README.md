@@ -4,6 +4,10 @@
   </p>
 </div>
 
+THIS DOESN'T WORK FOR DISCORD.JS V13!!
+SO PLS STOP DMING ME AND ASKING ME!
+YOU CAN YOURSELF MAKE IT V13 IT IS EASY!!
+
 ## Table Of Contents
 
 - [Table Of Contents](#table-of-contents)
